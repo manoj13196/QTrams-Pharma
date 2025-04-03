@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack serve --mode development",
-    "deploy": "npm run build"
+    "build:dist": "webpack --config webpack.config.js --env name=dist --mode production",
+    "build:docs": "webpack --config webpack.config.js --env name=docs --mode production",
+    "build": "npm run build:dist && npm run build:docs",
+    "start": "webpack serve --config webpack.config.js --env name=dist --mode development"
   },
   "name": "qtrams-pharma",
   "version": "1.0.0",
