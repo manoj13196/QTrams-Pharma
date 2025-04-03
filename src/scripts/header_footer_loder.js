@@ -1,11 +1,15 @@
 // Load header and footer dynamically
 window.addEventListener("DOMContentLoaded", () => {
-  loadComponent("header.html", "header-placeholder", initHeaderScripts);
-  loadComponent("footer.html", "footer-placeholder");
+  const basePath = window.location.pathname.includes("pages")
+    ? "../components/"
+    : "./components/";
+
+  loadComponent(`${basePath}header.html`, "header-placeholder", initHeaderScripts);
+  loadComponent(`${basePath}footer.html`, "footer-placeholder");
 });
 
 function loadComponent(file, elementId, callback) {
-  fetch(`/components/${file}`) // Use absolute path to ensure it works on all pages
+  fetch(file) // Use relative path to ensure it works on GitHub Pages
     .then((response) => response.text())
     .then((data) => {
       document.getElementById(elementId).innerHTML = data;
