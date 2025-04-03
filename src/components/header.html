@@ -36,21 +36,36 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-        <a href="../../index.html"
+        <a id="home-link"
           ><img class="logo_img" src="../../images/QTRAMS.jpg"
         /></a>
       </div>
       <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
 
       <ul class="nav-links">
-        <li><a href="/index.html" id="home-link">Home</a></li>
-        <li><a href="/pages/about.html" id="about-link">About</a></li>
-        <li><a href="/pages/services.html" id="services-link">Services</a></li>
-        <li><a href="/pages/clients.html" id="clients-link">Clients</a></li>
-        <li><a href="/pages/training.html" id="training-link">Training</a></li>
-        <li><a href="/pages/careers.html" id="careers-link">Careers</a></li>
-        <li><a href="/pages/contact.html" id="contact-link">Contact Us</a></li>
+        <li><a href="../index.html" id="nav-home">Home</a></li>
+        <li><a href="../pages/about.html" id="nav-about">About</a></li>
+        <li><a href="../pages/services.html" id="nav-services">Services</a></li>
+        <li><a href="../pages/clients.html" id="nav-clients">Clients</a></li>
+        <li><a href="../pages/training.html" id="nav-training">Training</a></li>
+        <li><a href="../pages/careers.html" id="nav-careers">Careers</a></li>
+        <li><a href="../pages/contact.html" id="nav-contact">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 </div>
+<script>
+  // Use the global basePath to dynamically set navigation links
+  document.getElementById("home-link").href = `${basePath}index.html`;
+  document.getElementById("nav-home").href = `${basePath}index.html`;
+  document.getElementById("nav-about").href = `${basePath}pages/about.html`;
+  document.getElementById(
+    "nav-services"
+  ).href = `${basePath}pages/services.html`;
+  document.getElementById("nav-clients").href = `${basePath}pages/clients.html`;
+  document.getElementById(
+    "nav-training"
+  ).href = `${basePath}pages/training.html`;
+  document.getElementById("nav-careers").href = `${basePath}pages/careers.html`;
+  document.getElementById("nav-contact").href = `${basePath}pages/contact.html`;
+</script>

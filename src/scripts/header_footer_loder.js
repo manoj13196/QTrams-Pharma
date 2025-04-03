@@ -1,16 +1,24 @@
+// Define basePath globally
+window.basePath = window.location.pathname.includes("/pages/") ? "../" : "./";
+
 // Load header and footer dynamically
 window.addEventListener("DOMContentLoaded", () => {
-  const basePath = window.location.pathname.includes("pages")
-    ? "../components/"
-    : "./components/";
-
-  loadComponent(`${basePath}header.html`, "header-placeholder", initHeaderScripts);
-  loadComponent(`${basePath}footer.html`, "footer-placeholder");
+  loadComponent(
+    `${basePath}components/header.html`,
+    "header-placeholder",
+    initHeaderScripts
+  );
+  loadComponent(`${basePath}components/footer.html`, "footer-placeholder");
 });
 
 function loadComponent(file, elementId, callback) {
-  fetch(file) // Use relative path to ensure it works on GitHub Pages
-    .then((response) => response.text())
+  fetch(file)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Cannot fetch ${file}: ${response.statusText}`);
+      }
+      return response.text();
+    })
     .then((data) => {
       document.getElementById(elementId).innerHTML = data;
       if (typeof callback === "function") callback();

@@ -41,16 +41,14 @@
     <!-- Section 2: Quick Links -->
     <div class="footer-section quick-links">
       <h3>Quick Links</h3>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../../src/pages/about.html">About</a></li>
-        <li><a href="../../src/pages/training.html">Training</a></li>
-        <li><a href="../../src/pages/clients.html">Clients</a></li>
-        <li><a href="../../src/pages/services.html">Services</a></li>
-        <li><a href="../../src/pages/careers.html">Careers</a></li>
-        <li><a href="../../src/pages/contact.html">Contact Us</a></li>
-
-
+      <ul class="footer-links">
+        <li><a href="../index.html" id="footer-home">Home</a></li>
+        <li><a href="../pages/about.html" id="footer-about">About</a></li>
+        <li><a href="../pages/services.html" id="footer-services">Services</a></li>
+        <li><a href="../pages/clients.html" id="footer-clients">Clients</a></li>
+        <li><a href="../pages/training.html" id="footer-training">Training</a></li>
+        <li><a href="../pages/careers.html" id="footer-careers">Careers</a></li>
+        <li><a href="../pages/contact.html" id="footer-contact">Contact Us</a></li>
       </ul>
     </div>
 
@@ -69,3 +67,14 @@
 <div class="footer-bottom">
   <p>&copy; 2025 QtramsPharma. All Rights Reserved.</p>
 </div>
+
+<script>
+  // Use the global basePath to dynamically set footer quick links
+  document.getElementById("footer-home").href = `${basePath}index.html`;
+  document.getElementById("footer-about").href = `${basePath}pages/about.html`;
+  document.getElementById("footer-services").href = `${basePath}pages/services.html`;
+  document.getElementById("footer-clients").href = `${basePath}pages/clients.html`;
+  document.getElementById("footer-training").href = `${basePath}pages/training.html`;
+  document.getElementById("footer-careers").href = `${basePath}pages/careers.html`;
+  document.getElementById("footer-contact").href = `${basePath}pages/contact.html`;
+</script>
