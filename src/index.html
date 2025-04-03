@@ -102,49 +102,6 @@
       </section>
 
       <!-- Testimonials -->
-      <!-- <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-carousel">
-        <div class="testimonial">
-            <div class="testimonial-icon">
-                <img src="./images/bxs-quote-alt-left.svg" alt="Quote Icon" class="quote-icon">
-            </div>
-            <p>"Great quality products and excellent support!"</p>
-        </div>
-        <div class="testimonial">
-            <div class="testimonial-icon">
-                <img src="./images/bxs-quote-alt-left.svg" alt="Quote Icon" class="quote-icon">
-            </div>
-            <p>"Highly recommend for healthcare needs."</p>
-        </div>
-        <div class="testimonial">
-            <div class="testimonial-icon">
-                <img src="./images/bxs-quote-alt-left.svg" alt="Quote Icon" class="quote-icon">
-            </div>
-            <p>"Top-notch pharmaceutical company."</p>
-        </div>
-        
-        <div class="testimonial">
-            <div class="testimonial-icon">
-                <img src="./images/bxs-quote-alt-left.svg" alt="Quote Icon" class="quote-icon">
-            </div>
-            <p>"Great quality products and excellent support!"</p>
-        </div>
-        <div class="testimonial">
-            <div class="testimonial-icon">
-                <img src="./images/bxs-quote-alt-left.svg" alt="Quote Icon" class="quote-icon">
-            </div>
-            <p>"Highly recommend for healthcare needs."</p>
-        </div>
-        <div class="testimonial">
-            <div class="testimonial-icon">
-                <img src="./images/bxs-quote-alt-left.svg" alt="Quote Icon" class="quote-icon">
-            </div>
-            <p>"Top-notch pharmaceutical company."</p>
-        </div>
-    </div>
-</section> -->
-
       <section class="testimonials">
         <h2>What Our Clients Say</h2>
 
@@ -252,41 +209,6 @@
       </section>
 
       <!-- Why Choose Us -->
-      <!-- <section class="why-choose-us">
-      <h2>Why Choose Us?</h2>
-      <div class="benefits">
-        <div class="benefit">
-            <h3>High Quality Standards</h3>
-            <p>We adhere to the highest quality standards to ensure every product exceeds expectations.</p>
-          </div>
-          
-          <div class="benefit">
-            <h3>Expert Research Team</h3>
-            <p>Our expert research team continuously innovates to bring you the best solutions.</p>
-          </div>
-          
-          <div class="benefit">
-            <h3>Global Distribution</h3>
-            <p>With our global distribution network, we deliver products to clients worldwide efficiently.</p>
-          </div>
-          
-          <div class="benefit">
-            <h3>Customer-Centric Approach</h3>
-            <p>We focus on your needs and work closely to deliver personalized solutions.</p>
-          </div>
-          
-          <div class="benefit">
-            <h3>Innovative Solutions</h3>
-            <p>We bring innovative solutions that help you stay ahead in a competitive market.</p>
-          </div>
-          
-          <div class="benefit">
-            <h3>Reliable Support</h3>
-            <p>Our dedicated support team is available to assist you whenever you need help.</p>
-          </div>
-          
-      </div>
-  </section> -->
       <section class="why-choose-us">
         <h2>Why Choose Us?</h2>
 
@@ -347,5 +269,14 @@
     </main>
 
     <div id="footer-placeholder"></div>
+
+    <script>
+      // Dynamically set image paths for the homepage
+      document.querySelectorAll("img").forEach((img) => {
+        if (img.src.includes("images/")) {
+          img.src = `${basePath}${img.src.split("images/")[1]}`;
+        }
+      });
+    </script>
   </body>
 </html>

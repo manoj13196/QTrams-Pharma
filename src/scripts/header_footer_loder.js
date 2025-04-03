@@ -1,10 +1,6 @@
 // Define basePath globally
 window.basePath =
-  window.location.hostname === "manoj13196.github.io"
-    ? "/QTrams-Pharma/"
-    : window.location.pathname.includes("/pages/")
-    ? "../"
-    : "./";
+  window.location.hostname === "manoj13196.github.io" ? "/QTrams-Pharma/" : "/";
 
 // Load header and footer dynamically
 window.addEventListener("DOMContentLoaded", () => {

@@ -76,9 +76,26 @@
   // Use the global basePath to dynamically set footer quick links
   document.getElementById("footer-home").href = `${basePath}index.html`;
   document.getElementById("footer-about").href = `${basePath}pages/about.html`;
-  document.getElementById("footer-services").href = `${basePath}pages/services.html`;
-  document.getElementById("footer-clients").href = `${basePath}pages/clients.html`;
-  document.getElementById("footer-training").href = `${basePath}pages/training.html`;
-  document.getElementById("footer-careers").href = `${basePath}pages/careers.html`;
-  document.getElementById("footer-contact").href = `${basePath}pages/contact.html`;
+  document.getElementById(
+    "footer-services"
+  ).href = `${basePath}pages/services.html`;
+  document.getElementById(
+    "footer-clients"
+  ).href = `${basePath}pages/clients.html`;
+  document.getElementById(
+    "footer-training"
+  ).href = `${basePath}pages/training.html`;
+  document.getElementById(
+    "footer-careers"
+  ).href = `${basePath}pages/careers.html`;
+  document.getElementById(
+    "footer-contact"
+  ).href = `${basePath}pages/contact.html`;
+
+  // Dynamically set image paths for footer icons
+  document.querySelector(".footer-logo").src = `${basePath}images/QTRAMS.jpg`;
+  document.querySelectorAll(".icon").forEach((icon) => {
+    const src = icon.getAttribute("src");
+    icon.src = `${basePath}${src.split("images/")[1]}`;
+  });
 </script>
