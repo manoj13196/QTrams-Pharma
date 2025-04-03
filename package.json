@@ -2,23 +2,11 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack serve --mode development",
-    "deploy": "npm run build && xcopy dist docs /E /I /Y"
+    "deploy": "npm run build"
   },
   "name": "qtrams-pharma",
   "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/manoj13196/QTrams-Pharma.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/manoj13196/QTrams-Pharma/issues"
-  },
-  "homepage": "https://github.com/manoj13196/QTrams-Pharma#readme",
+  "homepage": "https://manoj13196.github.io/QTrams-Pharma/",
   "devDependencies": {
     "copy-webpack-plugin": "^13.0.0",
     "html-webpack-plugin": "^5.6.3",

@@ -6,25 +6,25 @@ module.exports = {
   entry: "./src/scripts/main.js", // Entry point for JavaScript
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "dist"), // Default output to dist
+    path: path.resolve(__dirname, "docs"), // Change dist → docs for GitHub Pages
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html", // Ensure this path matches the location of index.html
-      filename: "index.html", // Output index.html in the dist directory
+      template: "./src/index.html", // Use src/index.html as template
+      filename: "index.html", // Output as index.html in docs/
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "src/components", to: "components" }, // Copy header.html and footer.html
+        { from: "src/components", to: "components" }, // Ensure header/footer work
         { from: "src/styles", to: "styles" }, // Copy CSS files
-        { from: "images", to: "images" }, // Copy images from the root directory
+        { from: "images", to: "images" }, // Copy images
         { from: "src/pages", to: "pages" }, // Copy other HTML pages
       ],
     }),
   ],
   devServer: {
-    static: path.resolve(__dirname, "dist"), // Serve from the dist folder
+    static: path.resolve(__dirname, "docs"), // Serve from docs (now matches GitHub Pages)
     port: 8080,
-    open: true, // Automatically open the browser
+    open: true,
   },
 };
