@@ -12,6 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
   loadComponent(`${basePath}components/footer.html`, "footer-placeholder");
 });
 
+
 function loadComponent(file, elementId, callback) {
   fetch(file)
     .then((response) => {
