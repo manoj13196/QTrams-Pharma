@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - PharmaCo</title>
+
+  <link rel="stylesheet" href="../styles/contact.css" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/navbar.css" />
+  <link rel="stylesheet" href="../styles/footer.css" />
+  <script defer src="../scripts/main.js"></script>
+  <script defer src="../scripts/header_footer_loder.js"></script>
+  <script defer src="../scripts/contact-form-validation.js"></script>
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <section class="page-heading">
+    <h1>Contact Us</h1>
+  </section>
+  <main class="contact-container">
+
+    <p>
+      We'd love to hear from you! Reach out using the form below or visit us
+      at our location.
+    </p>
+
+    <div class="contact-wrapper">
+      <form class="contact-form" id="contactForm" novalidate>
+        <div>
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" />
+        </div>
+
+        <span class="error-msg"></span>
+
+        <div>
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" />
+        </div>
+
+        <span class="error-msg"></span>
+        <div>
+
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
+        </div>
+
+        <span class="error-msg"></span>
+    
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p><strong>Phone:</strong> +91 9959571144</p>
+        <p><strong>Email:</strong> vivek.tummala@qtrams.com</p>
+        <p>
+          <strong>Address:</strong> MegRish Towers, Plot No : 9/A/21, Survey
+          No : 80-84 Partiknagar, Hi-tech City, Hyderabad-500081
+        </p>
+
+        <div class="social-media">
+          <a href="https://www.facebook.com" target="_blank"><img src="../images/Facebook_Logo_2023.png"
+              alt="Facebook" /></a>
+          <a href="https://www.instagram.com" target="_blank"><img src="../images/Instagram-Icon.png"
+              alt="Instagram" /></a>
+          <a href="https://www.linkedin.com" target="_blank"><img src="../images/linkedin.png" alt="LinkedIn" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <h2>Our Location</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1342.364318536985!2d78.38241499601898!3d17.444491613434604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93da152cb7dd%3A0xe1d02ef96dd2b3cb!2sMegrish%20tower!5e0!3m2!1sen!2sin!4v1742734666681!5m2!1sen!2sin"
+        width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+        width="100%" height="300" style="border:0;" allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </main>
+  <div id="footer-placeholder"></div>
+</body>
+
+</html>

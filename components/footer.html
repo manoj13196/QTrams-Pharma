@@ -1,0 +1,101 @@
+<footer>
+  <div class="footer-container">
+    <!-- Section 1: Company Info -->
+    <div class="footer-section company-info">
+      <img src="../../images/QTRAMS.jpg " alt="Company Logo" class="footer-logo" />
+
+      <div class="info-item">
+        <img src="../images/location-svg.svg" alt="Location Icon" class="icon" />
+        <div class="info-text">
+          <a href="https://www.google.com/maps?q=MegRish+Towers,+Plot+No:+9/A/21,+Survey+No:+80-84+Patrikanagar,+Hitech+City,+Hyderabad+-+500081"
+            target="_blank" rel="noopener noreferrer">
+            MegRish Towers, Plot No: 9/A/21,<br />
+            Survey No: 80-84 Patrikanagar,<br />
+            Hitech City, Hyderabad - 500081
+          </a>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <img src="../images/phone-svg.svg " alt="Phone Icon" class="icon" />
+        <div class="info-text">
+          <a href="tel:+91 9959571144">+91 9959571144</a>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <img src="../images/mail-svg.svg" alt="Mail Icon" class="icon" />
+        <div class="info-text">
+          <a href="mailto:vivek.tummala@qtrams.com">vivek.tummala@qtrams.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Quick Links -->
+    <div class="footer-section quick-links">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="../index.html" id="footer-home">Home</a></li>
+        <li><a href="../pages/about.html" id="footer-about">About</a></li>
+        <li>
+          <a href="../pages/services.html" id="footer-services">Services</a>
+        </li>
+        <li><a href="../pages/clients.html" id="footer-clients">Clients</a></li>
+        <li>
+          <a href="../pages/training.html" id="footer-training">Training</a>
+        </li>
+        <li><a href="../pages/careers.html" id="footer-careers">Careers</a></li>
+        <li>
+          <a href="../pages/contact.html" id="footer-contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Section 3: Recent Blogs -->
+    <div class="footer-section">
+
+      <div class="social-media-icons">
+        <h3>Follow Us</h3>
+        <div class="social-media-links">
+        <a href="https://www.facebook.com" target="_blank"><img src="../images/Facebook_Logo_2023.png"
+            alt="Facebook" /></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="../images/Instagram-Icon.png"
+            alt="Instagram" /></a>
+        <a href="https://www.linkedin.com" target="_blank"><img src="../images/linkedin.png" alt="LinkedIn" /></a>
+      </div>
+    </div>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <p>&copy; 2025 QtramsPharma. All Rights Reserved.</p>
+</div>
+
+<script>
+  // Use the global basePath to dynamically set footer quick links
+  document.getElementById("footer-home").href = `${basePath}index.html`;
+  document.getElementById("footer-about").href = `${basePath}pages/about.html`;
+  document.getElementById(
+    "footer-services"
+  ).href = `${basePath}pages/services.html`;
+  document.getElementById(
+    "footer-clients"
+  ).href = `${basePath}pages/clients.html`;
+  document.getElementById(
+    "footer-training"
+  ).href = `${basePath}pages/training.html`;
+  document.getElementById(
+    "footer-careers"
+  ).href = `${basePath}pages/careers.html`;
+  document.getElementById(
+    "footer-contact"
+  ).href = `${basePath}pages/contact.html`;
+
+  // Dynamically set image paths for footer icons
+  document.querySelector(".footer-logo").src = `${basePath}images/QTRAMS.jpg`;
+  document.querySelectorAll(".icon").forEach((icon) => {
+    const src = icon.getAttribute("src");
+    icon.src = `${basePath}${src.split("images/")[1]}`;
+  });
+</script>

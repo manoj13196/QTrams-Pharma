@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Explore QtramsPharma's professional pharmaceutical training programs, including Clinical Research, Manufacturing, and Regulatory Affairs." />
+  <title>Training Programs - PharmaCo</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/navbar.css" />
+  <link rel="stylesheet" href="../styles/training.css" />
+  <link rel="stylesheet" href="../styles/footer.css" />
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Scripts -->
+  <script defer src="../scripts/main.js"></script>
+  <script defer src="../scripts/training.js"></script>
+  <script defer src="../scripts/header_footer_loder.js"></script>
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <section class="page-heading">
+    <h1>Training Programs</h1>
+  </section>
+  <main>
+    <section class="training-section">
+      <h1>Advance Your Career with QtramsPharma Training</h1>
+      <p>
+        Gain expertise in the pharmaceutical industry with our world-class
+        training programs.
+      </p>
+
+      <div class="training-cards">
+        <div class="training-card">
+          <img src="../images/April-19-clinical-research-training-1.jpg" alt="Clinical Research Training" />
+          <h3>
+            <i class="fas fa-microscope"></i> Clinical Research Training
+          </h3>
+          <p>
+            Learn the latest clinical research techniques to excel in the
+            pharmaceutical industry.
+          </p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+        <div class="training-card">
+          <img src="../images/manufacturing.jpg" alt="Pharmaceutical Manufacturing" />
+          <h3>
+            <i class="fas fa-industry"></i> Pharmaceutical Manufacturing
+          </h3>
+          <p>
+            Master industry-standard manufacturing processes with expert
+            guidance.
+          </p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+        <div class="training-card">
+          <img src="../images/regulator_affairs.jpg" alt="Regulatory Affairs" />
+          <h3><i class="fas fa-file-contract"></i> Regulatory Affairs</h3>
+          <p>
+            Understand compliance and regulatory frameworks essential for
+            pharmaceutical businesses.
+          </p>
+          <button class="enroll-btn">Enroll Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>What Our Students Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="quote">
+            "The Clinical Research Training program was incredibly insightful and helped me secure a job in the
+            industry."
+          </p>
+          <p class="student-name">Priya Sharma</p>
+          <p class="student-role">Clinical Research Associate</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">
+            "The hands-on approach in the Pharmaceutical Manufacturing course was exactly what I needed to advance my
+            career."
+          </p>
+          <p class="student-name">Rahul Verma</p>
+          <p class="student-role">Manufacturing Specialist</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">
+            "The Regulatory Affairs training provided me with the knowledge to navigate complex compliance
+            requirements."
+          </p>
+          <p class="student-name">Anjali Patel</p>
+          <p class="student-role">Regulatory Affairs Manager</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enroll Modal -->
+    <div id="enroll-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Training Program Enrollment</h2>
+        <p id="selected-program-name" class="program-heading"></p>
+        <form id="enroll-form">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName"/>
+          <div class="error-msg" id="error-fullName"></div>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email"/>
+          <div class="error-msg" id="error-email"></div>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone"/>
+          <div class="error-msg" id="error-phone"></div>
+
+          <label for="program">Training Program</label>
+          <input type="text" id="program" name="program" readonly />
+
+          <label for="message">Why are you interested?</label>
+          <textarea id="message" name="message"></textarea>
+          <div class="error-msg" id="error-msg"></div>
+
+          <label class="consent-label">
+            <input type="checkbox" id="consent" required />
+            <p>I agree to be contacted regarding training opportunities.</p>
+          </label>
+          <div class="error-msg" id="error-consent"></div>
+
+          <button type="submit" class="submit-btn">Submit Enrollment</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+</body>
+
+</html>

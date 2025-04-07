@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - PharmaCo</title>
+  <meta name="description"
+    content="Explore PharmaCo's premium pharmaceutical services, including research, consulting, and manufacturing solutions tailored to industry needs." />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/navbar.css" />
+  <link rel="stylesheet" href="../styles/footer.css" />
+  <link rel="stylesheet" href="../styles/services.css" />
+
+  <script defer src="../scripts/main.js"></script>
+  <script defer src="../scripts/header_footer_loder.js"></script>
+
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <section class="page-heading">
+    <h1>Our Services</h1>
+  </section>
+
+  <main>
+    <section class="services-grid-section">
+      <h2 class="section-title">What We Offer</h2>
+
+      <div class="services-grid" >
+        <div class="service-card" data-service="QMS">
+          <div class="service-icon">
+            <img src="../images/service/icon.svg.svg" alt="QMS Icon" />
+          </div>
+          <div class="service-info">
+            <h3>QMS</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Audit & Compliance">
+          <div class="service-icon">
+            <img src="../images/service/audit&compliance.svg" alt="Audit & Compliance Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Audit & Compliance</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Mock Inspections">
+          <div class="service-icon">
+            <img src="../images/service/mock-inspection.svg" alt="Mock Inspections Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Mock Inspections</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Data Integrity">
+          <div class="service-icon">
+            <img src="../images/service/data-integrity.svg" alt="Data Integrity Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Data Integrity</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Remediation">
+          <div class="service-icon">
+            <img src="../images/service/remediation.svg" alt="Remediation Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Remediation</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Due Diligence Audits">
+          <div class="service-icon">
+            <img src="../images/service/due-deligince.svg" alt="Due Diligence Audits Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Due Diligence Audits</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Scientific & Technical Support">
+          <div class="service-icon">
+            <img src="../images/service/support.svg" alt="Scientific & Technical Support Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Scientific & Technical Support</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Analytical Services">
+          <div class="service-icon">
+            <img src="../images/service/analytical.svg" alt="Analytical Services Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Analytical Services</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Manufacturing Services">
+          <div class="service-icon">
+            <img src="../images/service/manufacturing.svg" alt="Manufacturing Services Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Manufacturing Services</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Validation / Qualification">
+          <div class="service-icon">
+            <img src="../images/service/validation.svg" alt="Validation / Qualification Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Validation / Qualification</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="CSV">
+          <div class="service-icon">
+            <img src="../images/service/csv.svg" alt="CSV Icon" />
+          </div>
+          <div class="service-info">
+            <h3>CSV</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Clinical Trials Support">
+          <div class="service-icon">
+            <img src="../images/service/clinical trails.svg" alt="Clinical Trials Support Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Clinical Trials Support</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Data Management">
+          <div class="service-icon">
+            <img src="../images/service/data-management.svg" alt="Data Management Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Data Management</h3>
+          </div>
+        </div>
+        <div class="service-card" data-service="Regulatory Services">
+          <div class="service-icon">
+            <img src="../images/service/regulatory-service.svg" alt="Regulatory Services Icon" />
+          </div>
+          <div class="service-info">
+            <h3>Regulatory Services</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for Service Details -->
+  <div id="service-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    // Service details data
+    const serviceDetails = {
+      QMS: "Quality Management Systems (QMS) ensure that your processes meet the highest standards of quality and compliance.",
+      "Audit & Compliance":
+        "Our Audit & Compliance services help you maintain regulatory standards and identify areas for improvement.",
+      "Mock Inspections":
+        "Mock Inspections prepare your organization for real audits by simulating the process and identifying gaps.",
+      "Data Integrity":
+        "Data Integrity services ensure the accuracy and reliability of your data.",
+      Remediation:
+        "Remediation services help you address compliance issues effectively.",
+      "Due Diligence Audits":
+        "Due Diligence Audits provide a comprehensive review of your operations.",
+      "Scientific & Technical Support":
+        "Scientific & Technical Support services offer expert guidance for your projects.",
+      "Analytical Services":
+        "Analytical Services provide precise testing and analysis solutions.",
+      "Manufacturing Services":
+        "Manufacturing Services ensure efficient and compliant production processes.",
+      "Validation / Qualification":
+        "Validation / Qualification services ensure your systems meet regulatory requirements.",
+      CSV: "Computer System Validation (CSV) ensures your systems are compliant and reliable.",
+      "Clinical Trials Support":
+        "Clinical Trials Support services assist in the planning and execution of trials.",
+      "Data Management":
+        "Data Management services ensure the secure and efficient handling of your data.",
+      "Regulatory Services":
+        "Regulatory Services help you navigate complex compliance requirements.",
+    };
+
+    // Modal functionality
+    const modal = document.getElementById("service-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
+    const closeModal = document.querySelector(".close-modal");
+
+    document.querySelectorAll(".service-card").forEach((card) => {
+      card.addEventListener("click", () => {
+        const service = card.getAttribute("data-service");
+        modalTitle.textContent = service;
+        modalDescription.textContent =
+          serviceDetails[service] || "Details coming soon.";
+        modal.classList.remove("hidden");
+      });
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+
+</html>

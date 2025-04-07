@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;700&display=swap');
+
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f3f6f8;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 45px;
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+}
+
+.headericons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.top-bar .container {
+  padding: 0px 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+}
+
+.address {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+/* Hide Top Bar on Mobile */
+@media (max-width: 767px) {
+  .top-bar {
+    display: none;
+  }
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 20px;
+  color: #003366;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 65px;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    top: 0;
+  }
+}
+
+.logo {
+  height: 65px;
+}
+
+.logo img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #032f5c;
+  font-size: 0.9rem;
+  /* font-family:'Times New Roman', Times, serif; */
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #021b34;
+  text-decoration: underline;
+}
+
+/* Dropdown Styles (Desktop) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 180px;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  padding: 8px;
+}
+
+.dropdown-menu a {
+  color: black;
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+}
+
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #003366;
+  cursor: pointer;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 80vh;         /* 👈 limit height for scroll */
+    overflow-y: auto;         /* 👈 enable scrolling */
+    z-index: 998;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Mobile Dropdown */
+  .dropdown-menu {
+    display: none;
+    position: static;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    padding-left: 20px;
+    max-height: 300px;        /* 👈 max height for scrolling */
+    overflow-y: auto;         /* 👈 enable scroll if needed */
+    z-index: 997;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* Main Content */
+main {
+  /* padding-top: 110px; */
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  main {
+    /* padding-top: 65px; */
+  }
+}

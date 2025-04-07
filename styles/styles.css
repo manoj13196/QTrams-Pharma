@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ensures footer sticks to bottom if content is short */
+}
+
+.page-heading {
+  background: linear-gradient(to right, #ffffff, #a4ddf5); /* Adjusted gradient */
+  color: #003366;
+  text-align: center;
+  padding: 30px 0px;
+  margin-top: 111px; /* Default margin for laptop and tablet screens */
+  box-sizing: border-box; /* Ensure proper alignment */
+}
+
+@media (max-width: 1024px) {
+  .page-heading {
+    margin-top: 111px; /* Consistent margin for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .page-heading {
+    margin-top: 111px; /* Adjust margin for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .page-heading {
+    margin-top: 66px; /* Adjust margin for mobile screens */
+  }
+}
+
+.page-heading h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}

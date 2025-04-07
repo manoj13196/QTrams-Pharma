@@ -1,0 +1,185 @@
+/* ===== Base Styles ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f7f9fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== Layout ===== */
+.careers-main {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px 25px;
+  gap: 40px;
+}
+
+/* ===== Intro Section ===== */
+.intro-section {
+  flex: 1;
+  max-width: 50%;
+}
+
+.intro-section h1 {
+  font-size: 2.2rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.intro-section p,
+.about-careers p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.about-careers h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #003366;
+}
+
+.about-careers ul {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.about-careers li {
+  margin-bottom: 10px;
+}
+
+/* ===== Application Form Section ===== */
+.application-section {
+  flex: 1;
+  max-width: 50%;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Center form on small screens */
+.application-section h2 {
+  font-size: 1.8rem;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#general-application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#general-application-form label {
+  font-weight: 600;
+  color: #003366;
+}
+
+#general-application-form >input,
+#general-application-form >textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.consent-label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#general-application-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#general-application-form button {
+  padding: 12px;
+  background-color: #003366;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#general-application-form button:hover {
+  background-color: #001e40;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 992px) {
+  .careers-main {
+    flex-direction: column;
+    padding-top: 70px;
+  }
+
+  .intro-section,
+  .application-section {
+    max-width: 100%;
+  }
+
+  .application-section {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .intro-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .application-section h2 {
+    font-size: 1.5rem;
+  }
+
+  #general-application-form input,
+  #general-application-form textarea {
+    font-size: 1rem;
+  }
+  
+
+  .application-section {
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+    .careers-main {
+      flex-direction: column; /* Stack content vertically */
+      padding: 120px 15px 40px; /* Adjust padding */
+      gap: 30px;
+    }
+  
+    .intro-section, 
+    .application-section {
+      width: 100%; /* Take full width */
+      text-align: center; /* Center text for better alignment */
+    }
+  
+    .application-section form {
+      width: 90%; /* Reduce form width */
+      margin: 0 auto;
+    }
+  }
+
+  .error-msg{
+    color: red;
+    font-size:0.9rem;
+
+  }

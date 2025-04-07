@@ -1,0 +1,78 @@
+<!-- Header Container to Wrap Top Bar and Navbar -->
+<div class="header-container">
+  <!-- Top Bar with Contact Information -->
+  <div class="top-bar">
+    <div class="container">
+      <!-- Phone -->
+      <p class="headericons">
+        <img src="../../images/phone-svg.svg" alt="Phone Icon" class="icon" />
+        <a href="tel:+91 9959571144">+91 9959571144</a>
+      </p>
+
+      <!-- Email -->
+      <p class="headericons">
+        <img
+          src="../../images/mail-svg.svg"
+          alt="Mail Icon"
+          class="icon" />
+        <a href="mailto:vivek.tummala@qtrams.com">vivek.tummala@qtrams.com</a>
+      </p>
+
+      <!-- Address (Now Wrapped in <address> for Better Semantics) -->
+      <address class="headericons">
+        <img src="../../images/location-svg.svg" alt="Location Icon" class="icon" />
+        <a
+          href="https://www.google.com/maps?q=MegRish+Towers,+Plot+No:+9/A/21,+Survey+No:+80-84+Patrikanagar,+Hitech+City,+Hyderabad+-+500081"
+          target="_blank"
+          rel="noopener noreferrer">
+          MegRish Towers, Plot No: 9/A/21, Survey No: 80-84 Patrikanagar, Hitech
+          City, Hyderabad - 500081
+        </a>
+      </address>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="../index.html" id="home-link"
+          ><img class="logo_img" src="../../images/QTRAMS.jpg" alt="Logo"
+        /></a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+      <ul class="nav-links">
+        <li><a href="../index.html" id="nav-home">Home</a></li>
+        <li><a href="../pages/about.html" id="nav-about">About</a></li>
+        <li><a href="../pages/industry.html" id="nav-industry">Industry</a></li>
+        <li><a href="../pages/services.html" id="nav-services">Services</a></li>
+        <li><a href="../pages/clients.html" id="nav-clients">Clients</a></li>
+        <li><a href="../pages/training.html" id="nav-training">Training</a></li>
+        <li><a href="../pages/careers.html" id="nav-careers">Careers</a></li>
+        <li><a href="../pages/contact.html" id="nav-contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<script>
+  // Use the global basePath to dynamically set navigation links
+  document.getElementById("home-link").href = `${basePath}index.html`;
+  document.getElementById("nav-home").href = `${basePath}index.html`;
+  document.getElementById("nav-about").href = `${basePath}pages/about.html`;
+  document.getElementById(
+    "nav-services"
+  ).href = `${basePath}pages/services.html`;
+  document.getElementById("nav-clients").href = `${basePath}pages/clients.html`;
+  document.getElementById(
+    "nav-training"
+  ).href = `${basePath}pages/training.html`;
+  document.getElementById("nav-careers").href = `${basePath}pages/careers.html`;
+  document.getElementById("nav-contact").href = `${basePath}pages/contact.html`;
+  document.getElementById(
+    "nav-industry"
+  ).href = `${basePath}pages/industry.html`;
+
+  // Dynamically set image paths based on the environment
+  document.querySelector(".logo_img").src = `${basePath}images/QTRAMS.jpg`;
+</script>

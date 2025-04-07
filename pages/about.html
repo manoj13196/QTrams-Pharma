@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Qtrams Pharma</title>
+
+  <meta name="description"
+    content="Learn more about PharmaCo, a leading pharmaceutical company dedicated to innovation, quality, and healthcare excellence.">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="../styles/navbar.css">
+  <link rel="stylesheet" href="../styles/about.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <script defer src="../scripts/header_footer_loder.js"></script>
+
+  <script defer src="../scripts/team-modal.js"></script>
+  <!-- Scripts -->
+  <script defer src="../scripts/main.js"></script>
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <section class="page-heading">
+    <h1>About</h1>
+  </section>
+  <main>
+    <section class="about-section">
+      <h1>Qtrams Pharma</h1>
+      <p>Qtrams Pharma is a leading pharmaceutical company dedicated to delivering high-quality healthcare solutions
+        worldwide. Our commitment to innovation and excellence has positioned us at the forefront of the pharmaceutical
+        industry.</p>
+      <!-- Team Section -->
+      <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="team-card" data-name="Dr. Ayesha Kapoor" data-role="Chief Scientist"
+            data-image="../images/doctor1.jpg"
+            data-bio="Dr. Ayesha has over 15 years of experience in pharmaceutical R&D. She leads our innovation team with a strong focus on safety, quality, and global impact.">
+            <img src="../images/doctor1.jpg" alt="Dr. Ayesha Kapoor">
+            <h3>Dr. Ayesha Kapoor</h3>
+            <p>Chief Scientist</p>
+            <button class="view-profile">View Profile</button>
+          </div>
+          <div class="team-card" data-name="Mr. Rahul Sen" data-role="Operations Head"
+            data-image="../images/doctor2.jpg"
+            data-bio="Rahul oversees global supply chains and ensures manufacturing excellence. His leadership guarantees timely, compliant product delivery worldwide.">
+            <img src="../images/doctor2.jpg" alt="Mr. Rahul Sen">
+            <h3>Mr. Rahul Sen</h3>
+            <p>Operations Head</p>
+            <button class="view-profile">View Profile</button>
+          </div>
+          <div class="team-card" data-name="Dr. Neha Patel" data-role="Clinical Lead" data-image="../images/doctor3.jpg"
+            data-bio="With deep clinical research knowledge, Dr. Neha leads trials and data validation. She ensures efficacy, safety, and ethics across our clinical pipeline.">
+            <img src="../images/doctor3.jpg" alt="Dr. Neha Patel">
+            <h3>Dr. Neha Patel</h3>
+            <p>Clinical Lead</p>
+            <button class="view-profile">View Profile</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal for Team Member Details -->
+      <div id="team-modal" class="modal hidden">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <div class="modal-body">
+            <img id="modal-image" src="" alt="Team Member Photo">
+            <div class="modal-text">
+              <h3 id="modal-name"></h3>
+              <p id="modal-role"></p>
+              <p id="modal-bio"></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget quam vel velit luctus blandit.
+                Aenean interdum tortor et diam eleifend, sed varius eros dictum. Sed in diam leo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Areas We Work In Section -->
+      <section class="areas-we-work">
+        <h2>Areas We Work In</h2>
+        <div class="areas-grid">
+          <div class="area-card">
+            <h3>Pharmaceutical Research</h3>
+            <p>Innovating new drugs and therapies to improve global healthcare.</p>
+          </div>
+          <div class="area-card">
+            <h3>Manufacturing Excellence</h3>
+            <p>Ensuring high-quality production standards across all facilities.</p>
+          </div>
+          <div class="area-card">
+            <h3>Regulatory Compliance</h3>
+            <p>Helping clients navigate complex regulatory landscapes worldwide.</p>
+          </div>
+          <div class="area-card">
+            <h3>Clinical Trials</h3>
+            <p>Conducting ethical and efficient trials to validate new treatments.</p>
+          </div>
+          <div class="area-card">
+            <h3>Global Distribution</h3>
+            <p>Delivering pharmaceutical products to over 50 countries.</p>
+          </div>
+          <div class="area-card">
+            <h3>Healthcare Training</h3>
+            <p>Empowering professionals with industry-leading training programs.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Milestones Section -->
+      <section class="milestones">
+        <h2>Our Milestones</h2>
+        <div class="milestones-grid">
+          <div class="milestone-card">
+            <h3>2020</h3>
+            <p>Founded with a vision to revolutionize healthcare solutions.</p>
+          </div>
+          <div class="milestone-card">
+            <h3>2021</h3>
+            <p>Launched our first product line focused on quality and affordability.</p>
+          </div>
+          <div class="milestone-card">
+            <h3>2022</h3>
+            <p>Expanded operations to serve clients across multiple regions.</p>
+          </div>
+          <div class="milestone-card">
+            <h3>2023</h3>
+            <p>Partnered with key industry players to enhance our offerings.</p>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <div class="about-content">
+      <div class="about-text">
+        <div class="mission-vision">
+          <div class="mission">
+            <h2>Our Mission</h2>
+            <p>We strive to enhance global health through cutting-edge research, quality manufacturing, and trusted
+              pharmaceutical solutions. Our goal is to make healthcare accessible and effective for all.</p>
+          </div>
+          <div class="vision">
+            <h2>Our Vision</h2>
+            <p>We envision a world where advanced medical solutions improve lives, and we are dedicated to pioneering
+              pharmaceutical advancements and biotechnology.</p>
+          </div>
+        </div>
+
+        <div class="why-choose-us">
+          <h2>Why Choose Us?</h2>
+          <div class="features">
+            <div class="feature">
+              <span class="icon"></span>
+              <p>Industry-leading research and innovation</p>
+            </div>
+            <div class="feature">
+              <span class="icon"></span>
+              <p>High-quality and safe pharmaceutical products</p>
+            </div>
+            <div class="feature">
+              <span class="icon"></span>
+              <p>Commitment to regulatory compliance and ethics</p>
+            </div>
+            <div class="feature">
+              <span class="icon"></span>
+              <p>Global reach with strong partnerships</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <div id="footer-placeholder"></div>
+
+</body>
+
+</html>

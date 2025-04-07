@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers - PharmaCo</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/careers.css" />
+    <script defer src="../scripts/header_footer_loder.js"></script>
+    <script defer src="../scripts/career-form-validation.js"></script>
+
+
+    <!-- Scripts -->
+    <script defer src="../scripts/main.js"></script>
+  </head>
+
+  
+<body>
+  <!-- Navbar Placeholder -->
+  <div id="header-placeholder"></div>
+  <section class="page-heading">
+    <h1>Careers</h1>
+  </section>
+  <!-- Main Content -->
+  <main class="careers-main">
+    <!-- Intro Section -->
+    <section class="intro-section">
+      <h1>Careers at QtramsPharma</h1>
+      <p>
+        We're always on the lookout for passionate individuals who want to
+        shape the future of healthcare with us. If you don’t see a position
+        listed, don't worry—we still want to hear from you!
+      </p>
+      
+
+      <div class="about-careers">
+        <h2>Why Work With Us?</h2>
+        <ul>
+          <li>
+            Make a difference in lives through groundbreaking research and
+            innovation.
+          </li>
+          <li>
+            Be part of a collaborative and inclusive culture that supports
+            growth.
+          </li>
+          <li>
+            Work with world-class professionals and cutting-edge technology.
+          </li>
+        </ul>
+        <p>
+          If you're ready to bring your skills and energy to PharmaCo, fill
+          out the form below. Let us know how you can contribute.
+        </p>
+      </div>
+    </section>
+
+    <!-- General Application Form -->
+    <section class="application-section">
+      <h2>Submit Your Application</h2>
+      <form id="general-application-form" novalidate>
+        
+        <label for="full-name">Full Name*</label>
+        <input type="text" id="full-name" name="fullName" />
+        <span class="error-msg"></span>
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" />
+        <span class="error-msg"></span>
+
+        <label for="phone">Phone Number*</label>
+        <input type="tel" id="phone" name="phone" />
+        <span class="error-msg"></span>
+
+        <label for="location">Current Location</label>
+        <input type="text" id="location" name="location" />
+
+        <label for="experience">Years of Experience</label>
+        <input type="number" id="experience" name="experience" min="0" />
+
+        <label for="qualification">Highest Qualification</label>
+        <input type="text" id="qualification" name="qualification" />
+        <span class="error-msg"></span>
+
+        <label for="message">Tell us why you're interested in QTrams Pharma*</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+        <span class="error-msg"></span>
+
+        <label for="resume">Upload Your Resume*</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+        <span class="error-msg"></span>
+
+        <div>
+          <label class="consent-label">
+            <input type="checkbox" id="consent" name="consent" required />
+            <p>I agree to be contacted by QtramsPharma.</p>
+          </label>
+        </div>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+</body>
+</html>
