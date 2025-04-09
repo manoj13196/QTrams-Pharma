@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('general-application-form');
 
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', async function (event) {
         event.preventDefault(); // Prevent form submission by default
 
         const name = document.getElementById('full-name').value.trim();
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
+        const location = document.getElementById('location').value.trim();
+        const experience = document.getElementById('experience').value.trim();
         const qualification = document.getElementById('qualification').value.trim();
         const resumeInput = document.getElementById('resume');
         const resume = resumeInput.files[0];
@@ -41,9 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
             valid = false;
         }
 
-       
-      
-
         // Validate Message
         if (message === '' || message.length < 10) {
             errorMessages[4].textContent = 'Message should be at least 10 characters long!';
@@ -57,8 +56,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // If all fields are valid, submit the form
         if (valid) {
-            alert('Form submitted successfully!');
-            form.reset();
+    
+            const formData=new FormData(this);
+            const formObject={};
+            formData.forEach((value, key) => {
+                formObject[key]=value;
+    
+            });
+            formObject['file']=resume;
+            // console.log(formObject)
+
+            try{
+                const response=await fetch('https://comany-site-backend.vercel.app/upload-details',{
+                    method:'POST',
+                    headers:{
+                        'content-Type':'application/json',
+
+                    },
+
+                    body:JSON.stringify(formObject),
+                });
+
+                if(response.ok){
+                    alert('Form submitted successfully!');
+                    // form.reset();
+                }
+                else{
+                    alert('Sorry form submission failed! Please try again.');
+                }
+
+
+            }
+            catch(error){
+                console.error('Error Submitting form:',error);
+                alert('There was a problem in submitting you form. Please try again!')
+
+            }
+            
         }
     });
 });

@@ -212,3 +212,27 @@ main {
     color: red;
     font-size: 0.9rem;
 }
+
+
+
+/* .toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #333;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    animation: fadeInOut 3s forwards;
+    font-size: 0.9rem;
+    z-index: 9999;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    10%, 90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(20px); }
+  }
+   */

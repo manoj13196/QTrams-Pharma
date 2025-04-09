@@ -1,6 +1,7 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('contactForm');
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
         const name = document.getElementById('name').value.trim();
@@ -11,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const errorMessages = document.querySelectorAll('.error-msg');
         errorMessages.forEach((el) => (el.textContent = ''));
+
+        
 
         // Validate Name
         if (name === '') {
@@ -32,8 +35,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // If all fields are valid
         if (valid) {
-            alert("Form submitted successfully!");
-            form.reset();
+
+            const formData=new FormData(this);
+            const formObject={};
+            formData.forEach((value, key) => {
+                formObject[key]=value;
+            });
+
+            try{
+                const response=await fetch('https://comany-site-backend.vercel.app/submit',{
+                    method:'POST',
+                    headers:{
+                        'Content-Type':'application/json',
+                    },
+                    body:JSON.stringify(formObject),
+                });
+
+                if(response.ok){
+                    alert('Form submitted successfully!');
+                    // toast.success("🚀 Successfully toasted!");
+                    
+                    form.reset();
+                }
+                else{
+                    alert('Sorry something went wrong! Please try again.');
+                    // toast.error("Oops! Something went wrong.");
+                }
+
+            }
+            catch(error){
+                console.error('Error submitting form:', error);
+                alert("There was a problem sending your message. Please try again later.");
+            }
+        
         }
     });
 });

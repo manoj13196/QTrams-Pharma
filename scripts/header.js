@@ -22,21 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
             // Close other open dropdowns
             dropdowns.forEach(d => {
                 if (d !== dropdown) {
-                    d.querySelector(".dropdown-menu").classList.remove("show-dropdown");
+                    d.classList.remove("open");
                 }
             });
 
             // Toggle the current dropdown
-            const dropdownMenu = dropdown.querySelector(".dropdown-menu");
-            dropdownMenu.classList.toggle("show-dropdown");
+            dropdown.classList.toggle("open");
         });
     });
 
     // Optional: Close dropdown if clicking outside
     document.addEventListener("click", function (e) {
         if (!e.target.closest(".dropdown")) {
-            document.querySelectorAll(".dropdown-menu").forEach(menu => {
-                menu.classList.remove("show-dropdown");
+            document.querySelectorAll(".dropdown").forEach(dropdown => {
+                dropdown.classList.remove("open");
             });
         }
     });

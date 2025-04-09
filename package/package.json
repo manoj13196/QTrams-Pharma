@@ -1,0 +1,27 @@
+{
+  "name": "vanilla-hot-toast",
+  "description": "A tasty, standalone toast notification library. Based on react-hot-toast.",
+  "version": "0.1.0",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "notification",
+    "toast"
+  ],
+  "author": "Timo Lins",
+  "license": "MIT",
+  "dependencies": {
+    "preact": "^10.13.2",
+    "react-hot-toast": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "tsup": "^6.7.0"
+  },
+  "main": "dist/index.global.js",
+  "scripts": {
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

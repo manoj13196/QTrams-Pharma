@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const programInput = document.getElementById("program");
   const programNameHeading = document.getElementById("selected-program-name");
   const enrollForm = document.getElementById("enroll-form");
+  let program;
 
   // Check if modal and close button exist
   if (modal && closeModal) {
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", (e) => {
         const card = e.target.closest(".training-card");
         const title = card.querySelector("h3").innerText.trim();
-
+        program=title;
         programInput.value = title;
         programNameHeading.textContent = title;
 
@@ -55,11 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const phoneRegex = /^\d{10}$/;
 
   // Form validation logic
-  enrollForm.addEventListener("submit", function (e) {
+  enrollForm.addEventListener("submit", async function (e) {
     e.preventDefault(); // Prevent actual form submission
 
     clearErrors();
-
+    
     let hasError = false;
 
     // Full Name validation
@@ -141,9 +142,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // If all validation passes
     if (!hasError) {
-      alert("Enrollment submitted successfully!");
-      enrollForm.reset();
-      modal.classList.add("hidden");
+      
+      const formData={
+        "fullName" : fullName.value.trim(),
+        "email" : email.value.trim(),
+        "phone" : phone.value.trim(),
+        "message" : message.value.trim(),
+        "program" : program,
+      }
+      console.log( JSON.stringify(formData))
+
+      try{
+        const response = await fetch('https://comany-site-backend.vercel.app/trainee-details',{
+          method : 'POST',
+          headers:{
+            'content-Type' : 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if(response.ok){
+          alert('Form submitted successfully!');
+          enrollForm.reset();
+          modal.classList.add("hidden");
+        }
+        else{
+          
+          if(response.status===500){
+            alert('Data already exist!, please try with different Email and phone number.')
+          }
+          else{ 
+            alert('Sorry form submission failed! Please try again.');
+          }
+        }
+
+      }
+      catch(error){
+        console.log('Error submitting form: ',error);
+        alert('There was a problem in submitting your form. Please try again!')
+      }
+      
     }
   });
 });

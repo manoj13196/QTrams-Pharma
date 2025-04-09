@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../styles/styles.css" />
   <link rel="stylesheet" href="../styles/navbar.css" />
   <link rel="stylesheet" href="../styles/footer.css" />
+
   <script defer src="../scripts/main.js"></script>
   <script defer src="../scripts/header_footer_loder.js"></script>
   <script defer src="../scripts/contact-form-validation.js"></script>
@@ -31,7 +32,7 @@
       <form class="contact-form" id="contactForm" novalidate>
         <div>
           <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" />
+          <input type="text" id="name" name="username" placeholder="Enter your name" />
         </div>
 
         <span class="error-msg"></span>
@@ -45,7 +46,7 @@
         <div>
 
           <label for="message">Your Message:</label>
-          <textarea id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
+          <textarea id="message" name="description" rows="5" placeholder="Enter your message"></textarea>
         </div>
 
         <span class="error-msg"></span>
@@ -84,6 +85,10 @@
     </div>
   </main>
   <div id="footer-placeholder"></div>
+
+  <!-- <script src="../package/dist/vanilla-hot-toast.min.js"></script> -->
+  <!-- <script type="module" src="../scripts/toaster.js"></script> -->
+   <!-- <script src="/index.tsx"></script> -->
 </body>
 
 </html>

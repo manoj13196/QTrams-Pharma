@@ -194,8 +194,8 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-height: 80vh;         /* 👈 limit height for scroll */
-    overflow-y: auto;         /* 👈 enable scrolling */
+    max-height: 80vh;         /*  limit height for scroll */
+    overflow-y: auto;         /*  enable scrolling */
     z-index: 998;
   }
 
@@ -215,8 +215,8 @@ h1, h2, h3, h4, h5, h6 {
     background: white;
     width: 100%;
     padding-left: 20px;
-    max-height: 300px;        /* 👈 max height for scrolling */
-    overflow-y: auto;         /* 👈 enable scroll if needed */
+    max-height: 300px;        /* max height for scrolling */
+    overflow-y: auto;         /*  enable scroll if needed */
     z-index: 997;
   }
 
