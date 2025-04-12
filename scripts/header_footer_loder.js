@@ -72,8 +72,14 @@ function initHeaderScripts() {
   // Highlight current page in nav
   const currentPage = window.location.pathname.split("/").pop();
   document.querySelectorAll(".nav-links a").forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href").includes(currentPage)) {
+    link.classList.remove("active"); // Remove active class from all links
+    if (currentPage === "" || currentPage === "index.html") {
+      // Default to home if no specific page is detected
+      document.getElementById("nav-home").classList.add("active");
+    } else if (currentPage.includes("industry")) {
+      // Highlight "Industry" for any industry-related page
+      document.getElementById("nav-industry").classList.add("active");
+    } else if (link.getAttribute("href").includes(currentPage)) {
       link.classList.add("active");
     }
   });
