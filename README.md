@@ -1,1 +1,1 @@
-# QTrams-Pharma
+# QTrams Pharma

@@ -127,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-links a {
   color: #032f5c;
-  font-size: 0.9rem;
+  font-size: 1rem;
   /* font-family:'Times New Roman', Times, serif; */
   text-decoration: none;
   padding: 8px 12px;
@@ -138,11 +138,21 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links .active {
   color: #021b34;
   text-decoration: underline;
+     
 }
 
 .nav-links a.active {
   color: #021b34;
   text-decoration: underline;
+}
+
+#nav-contact{
+  background-color:#034f9c;
+  color: #f3f6f8;
+  border-radius: 20px;
+}
+#nav-contact:hover{
+  background-color: #003366;
 }
 
 /* Dropdown Styles (Desktop) */
