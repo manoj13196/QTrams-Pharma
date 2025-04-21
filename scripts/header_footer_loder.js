@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 function loadComponent(file, elementId, callback) {
   fetch(file)
     .then((response) => {
-      if (!response.ok) {
+      if (!response.ok) {  
         throw new Error(`Cannot fetch ${file}: ${response.statusText}`);
       }
       return response.text();

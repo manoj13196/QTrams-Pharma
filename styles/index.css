@@ -52,6 +52,11 @@ main {
   transition: background 0.3s, transform 0.3s;
 }
 
+.hero button a{
+color: white;
+text-decoration: none;
+}
+
 .hero button:hover {
   background: #036292;
   transform: scale(1.03);
@@ -777,3 +782,106 @@ input[type="email"]:focus {
 
 
 
+
+
+
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+.modal.hidden{
+  display: none;
+}
+
+.modal-content{
+  background: white;
+  padding: 20px;
+  max-width: 700px;
+  width: 90%;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.modal-body{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.modal-image{
+  flex: 1 1 200px;
+  max-width: 250px;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-image img {
+  width: 100%;
+  height: auto;
+  /* border-radius: 8px;  */
+}
+
+.close-modal{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#modal-description {
+  flex: 2 1 300px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+#modal-description ul{
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.modal-head{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  justify-content: center;
+}
+
+@media(max-width:768px)
+{
+ 
+
+  .modal-body{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #modal-description{
+    text-align: left;
+    width: 100%;
+  }
+}

@@ -25,6 +25,7 @@ body {
 
 /* ===== Intro Section ===== */
 .intro-section {
+  /* margin-top: 20px; */
   flex: 1;
   max-width: 50%;
 }
@@ -48,12 +49,19 @@ body {
 }
 
 .about-careers ul {
-  margin-left: 20px;
+  margin-left: 5px;
   padding-left: 0;
+
 }
 
 .about-careers li {
-  margin-bottom: 10px;
+  margin: 20px 0px 20px;
+  /* margin-bottom: 10px; */
+  background-color: #e6e6e8;
+  padding: 10px;
+  border-radius: 10px;
+  list-style-type: none;
+  border-left: solid 4px #033977;
 }
 
 /* ===== Application Form Section ===== */
@@ -74,10 +82,14 @@ body {
   margin-bottom: 25px;
 }
 
+.application-section form input{
+  height: 10vh;
+}
+
 #general-application-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 #general-application-form label {
@@ -137,7 +149,10 @@ body {
   .application-section {
     padding: 30px 20px;
   }
+  
 }
+
+
 
 @media (max-width: 576px) {
   .intro-section h1 {
@@ -152,30 +167,34 @@ body {
   #general-application-form textarea {
     font-size: 1rem;
   }
-  
+ 
 
   .application-section {
     padding: 25px 15px;
   }
 }
 
-@media (max-width: 1024px) {
+
+
+@media (min-width: 1024px) {
     .careers-main {
-      flex-direction: column; /* Stack content vertically */
-      padding: 120px 15px 40px; /* Adjust padding */
+      flex-direction: row; /* Stack content vertically */
+      padding: 100px 15px 40px; /* Adjust padding */
       gap: 30px;
     }
   
     .intro-section, 
     .application-section {
       width: 100%; /* Take full width */
-      text-align: center; /* Center text for better alignment */
+       /* Center text for better alignment */
     }
   
     .application-section form {
       width: 90%; /* Reduce form width */
       margin: 0 auto;
     }
+    
+   
   }
 
   .error-msg{
